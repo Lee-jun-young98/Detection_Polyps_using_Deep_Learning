@@ -27,6 +27,7 @@
 
 - DeeplabV3
   - ResNet을 기본적인 특징 추출기로 사용하여 마지막 블록에서 Atrous Convolution을 사용해서 다양한 특징들의 크기를 뽑아낼 수 있도록 함
+ 
 ![image](https://user-images.githubusercontent.com/80506107/175772765-37448bc9-525e-4d7a-8d3e-030a173366ad.png)
 
 - 성능 평가 지표로는 MIOU를 사용
@@ -39,3 +40,6 @@
 - U-net의 성능이 실시간 용종 검출에 유의한 성능을 보임
 - 초기에 더 많은 용종을 자동으로 감지하는 것이 대장암의 예방과 생존 모두를 개선하는 데 중요한 역할을 보임
 - 용종뿐만 아니라 다른 질병에 해당하는 마스킹데이터가 존재한다면 다른 질병도 검출 가능
+
+## reference
+https://fuchsia-runner-4af.notion.site/9aeca402487d47fdb54e9b9bf1939fd9?v=2effe84b879f44e2a2192a1c80c3e783
