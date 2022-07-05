@@ -6,8 +6,7 @@
 - convolutional networks에서는 결과 이미지가 단일 분류인 경우가 많지만, 많은 이미지 업무에서는(특히 생물학 이미지 처리) 지역적 특성을 원하는 경우가 많음 → 클래스 label를 각 픽셀에 할당함
 
 # U-net Architecture
-
-![Untitled](U-net%20b6a470a1660d49dc866e0c1c82209dc1/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/80506107/177286522-74cd8385-f093-4bb7-be27-c535a20f014e.png)
 
 - 파란 박스는 피처맵이며 각 박스의 채널 수는 그 위에 작성 되어 있음
 - x, y, z 크기는 박스 왼쪽 구석에 작성되어 있으며, 하얀 박스는 복사된 feature map임
@@ -18,7 +17,7 @@
 
 # Overlap-Tite Input
 
-![Untitled](U-net%20b6a470a1660d49dc866e0c1c82209dc1/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/80506107/177286554-2fe19fa4-0ad6-4b0b-8f11-f87e61b8caab.png)
 
 - Fully Convolutional Network 구조의 특성상 입력 이미지의 크기에 제약이 없음
 - 따라서 이미지 전체를 사용하는 대신 overlap-tite 전략을 사용
@@ -29,7 +28,7 @@
 
 # Contracting Path(수축 경로)
 
-![Untitled](U-net%20b6a470a1660d49dc866e0c1c82209dc1/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/80506107/177286578-2cb7d4d2-74aa-4aa9-8816-8ae817593e84.png)
 
 - 입력 이미지의 Context 포착을 목적으로 구성 되어 있으며
 - FCNs처럼 VGG-based Architecture 기반임
@@ -38,7 +37,8 @@
 
 # Expanding Path(확장 경로)
 
-![Untitled](U-net%20b6a470a1660d49dc866e0c1c82209dc1/Untitled%203.png)
+
+![Untitled 3](https://user-images.githubusercontent.com/80506107/177286611-9d4e353d-efdc-4eb9-be54-93d44ee9056f.png)
 
 - Contracting Path와 반대로 특징맵을 확장하며 각 스텝마다 2x2 Up-convolution을 수행
 - 3x3 convolution을 두 차례씩 반복(ReLU포함)
@@ -50,7 +50,7 @@
 
 # Skip Architecture
 
-![Untitled](U-net%20b6a470a1660d49dc866e0c1c82209dc1/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/80506107/177286639-26a06562-80a6-4c55-97fe-5a2e3f058179.png)
 
 - 각 Expanding Step마다 Up-conv 된 특징맵은 Contracting path의 cropped된 특징맵과 concatenation 함
 
@@ -59,16 +59,14 @@
 - 네트워크의 출력 값은 픽셀 단위의 softmax로 예측
 - 최종 특징 맵(채널 k)에 대한 픽셀 x의 예측 값은 다음과 같이 계산됨
 
-![Untitled](U-net%20b6a470a1660d49dc866e0c1c82209dc1/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/80506107/177286658-9efe2d86-d716-43b8-8580-42be5a1609e8.png)
 
 - Loss function은 Cross-entorpy 함수가 사용되며 Touching Cells 분리를 고려하기 위해 Weight map loss가 포함됨
 
-![Untitled](U-net%20b6a470a1660d49dc866e0c1c82209dc1/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/80506107/177286678-1e77eb03-32b1-4d45-a6bd-661b5f38f7c9.png)
 
 # 참고
 
 [U-Net 논문 리뷰 - U-Net: Convolutional Networks for Biomedical Image Segmentation](https://medium.com/@msmapark2/u-net-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-u-net-convolutional-networks-for-biomedical-image-segmentation-456d6901b28a)
 
-- U-net
-
-[](https://arxiv.org/pdf/1505.04597.pdf)
+[U-net](https://arxiv.org/pdf/1505.04597.pdf)
