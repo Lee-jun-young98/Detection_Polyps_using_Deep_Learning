@@ -42,7 +42,7 @@
 - 용종뿐만 아니라 다른 질병에 해당하는 마스킹데이터가 존재한다면 다른 질병도 검출 가능
 
 ## Reference
-https://fuchsia-runner-4af.notion.site/9aeca402487d47fdb54e9b9bf1939fd9?v=2effe84b879f44e2a2192a1c80c3e783
+[https://fuchsia-runner-4af.notion.site/9aeca402487d47fdb54e9b9bf1939fd9?v=2effe84b879f44e2a2192a1c80c3e783](https://fuchsia-runner-4af.notion.site/14d3cb38008b4946b2af9c75ed0e4c26?v=4373f39a96e346a38c5d9a4613240a66)
 
 
 2021 - 12 빅데이터공학과 학술제 우수상
